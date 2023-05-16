@@ -1,0 +1,154 @@
+            .ui-loader, .ui-icon-loading{display: none;} 
+
+            html {
+              scroll-behavior: smooth;
+                }
+
+            #content {
+                background-size: 100%;
+                background-repeat: no-repeat;
+                margin: 0;
+                padding: 0;
+                width: 1024px;
+                height: 768px;
+                position: fixed;
+                top: 0;
+                left: 0;
+            }
+
+            #main {
+                display: none;
+                top:0px;
+                left:0px;
+                overflow: hidden;
+            }
+
+            #navi{
+                position: fixed;
+                top: 718px;
+                left: 0px;
+                height:50px;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            #navi img{
+               width:1024px;height:55px;
+            }
+            #home, #prev,  #next, #seitenuebersicht, #referenzen, #abkuerzungen, #fachinformation, #sendmail
+                {
+                    position: absolute;
+                    top: 5px;
+                    height: 41px;
+                    z-index: 1000;
+                    width: 209px;
+
+                }
+            #home{
+                width: 44px;
+                left: 44px;
+                }
+
+            #seitenuebersicht{
+                left: 101px;
+                }
+
+            #referenzen{
+                left: 336px; 
+                }
+
+            #abkuerzungen{
+                left: 570px;
+               }
+            
+            #fachinformation{
+                left: 803px;
+                }
+
+
+            #popupclosebtn{
+                width: 40px;
+                height: 40px;
+                top: 198px;
+                position: absolute;
+                left: 851px;
+                border-radius: 50% 50%;
+                z-index: 1000;
+                }
+            #pageclosebtn{
+                width: 60px;
+                height: 60px;
+                top: 46px;
+                left: 911px;
+                position: absolute;
+                border-radius: 50% 50%;
+                z-index: 1000;
+                }
+            .people-box-6{
+                margin: 0;
+                position: relative;
+                top: 460px;
+                left: 285px;
+            }
+            .people-box-8{
+                margin: 0;
+                position: relative;
+                top: 460px;
+                left: 320px;
+            }
+            #trigger {
+                position: absolute;
+                top: 345px;
+                left: 735px;
+                width:40px;
+                height: 40px;
+            }
+            #counter {
+                position: absolute;
+                left: 400px;
+                top: 140px;
+                color:white;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 80px;
+            }
+
+            .deactivated{background-color:rgba(12,12,12,0.7);}
+
+            #scrolldown,  #scrollup{
+                    position: fixed;
+                    bottom: 60px;
+                    right: 14px;
+                    overflow: hidden;
+                    color: rgba(255,255,255,1);
+                    opacity: 0.4;
+                    font-size: 80px;
+                    background: rgba(255,255,255,0.4);
+                    border-radius: 50%;
+                    width: 80px;
+                    height: 80px;
+                    text-align: center;
+                    border: 5px solid rgba(255,255,255,1);
+                    animation: pulse 2000ms 1;                       
+            }
+            @keyframes pulse{
+                  00%{
+                    opacity:0.4;
+                  }
+                  50%{
+                    opacity:0.8;
+
+                  }
+                  100%{
+                    opacity:0.4;
+                  }
+                }
+
+            #scrolldown {
+                transform: rotate(90deg);
+                display: inline;
+            }
+
+            #scrollup {
+                display: none;
+                transform: rotate(270deg);
+            }      

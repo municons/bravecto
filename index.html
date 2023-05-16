@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <!-- NORMAL SLIDE -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <script type="text/javascript" src="../MuniConS_01/js/noBounce.js"></script>
+    <script type="text/javascript" src="../MuniConS_01/js/veeva-library.js"></script>
+    <script type="text/javascript" src="../MuniConS_01/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../MuniConS_01/js/jquery.mobile-1.4.5.min.js"></script>
+    <!-- <script type="text/javascript" src="../MuniConS_01/js/general.js"></script> -->
+    <script type="text/javascript" src="../MuniConS_01/js/general_online.js"></script>
+    <script type="text/javascript" src="../MuniConS_01/js/globals.js"></script>
+    <script type="text/javascript" src="../MuniConS_01/js/slideflow.js"></script>
+    <link rel="stylesheet" type="text/css" href="../MuniConS_01/css/style.css" />
+    <script type="text/javascript">
+        presentation = "MuniConS";
+        previous_slide = "";
+        slide_id = "01";
+        next_slide = "02";
+        sendglobalvalue("slideflowisactive", "false");
+        /*Get global values*/
+        var globalvariables = storage.getAll();
+        
+        /*Set Return-Value for PopUps*/
+        sendglobalvalue("returntoid", slide_id);
+   
+        //Slideflow - Init - Start//
+        slideflow = globalvariables["slideflow"];							//slideflow
+        slideflowisactive = globalvariables["slideflowisactive"];			//slideflow
+        if (slideflow) { slideflow = slideflow.split(","); }				//slideflow
+        if (!Array.isArray(slideflow)) { slideflow = new Array(99); slideflowisactive = false; sendglobalvalue("slideflowisactive", "false"); }		               //slideflow
+        //Slideflow - Init - End//
+        
+        $("body").bind('touchmove', function (event) {
+            event.preventDefault();
+        });
+        
+        $(document).ready(function () {
+            
+            noBounce.init({ animate: true });
+              
+            //Slideflow - Main - Start//
+            var getSlidesArr = JSON.parse(localStorage.getItem('hideNav'));
+
+            if(slideflowisactive=="true"){
+                from = globalvariables["returntoid"];
+                nextslide = "";
+                previousslide = "";
+                slideflow.forEach(element => checkifhigher(element, from));
+                slideflow.reverse();
+                slideflow.forEach(element => checkiflower(element, from));
+                slideflow.reverse();
+            }
+            else
+            {
+                nextslide=next_slide;
+                previousslide=previous_slide;
+            }
+            //Slideflow - Main - End//
+            
+            /*SWIPE DETECT*/
+            $("#main").on("swipeleft", swipeLeftHandler);
+            function swipeLeftHandler(event) {
+                veevaNavigateSceneWithID(nextslide);
+            }
+            $("#main").on("swiperight", swipeRightHandler);
+            function swipeRightHandler(event) {
+                //veevaNavigateSceneWithID(previousslide);
+            }
+            
+            //load background//
+            var bgimage="url('"+presentation+"_"+slide_id+"-full.jpg')";
+            document.getElementById('content').style.backgroundImage = bgimage;
+            
+            fadebodyin();
+        });
+        
+        function fadebodyin() {
+            $("#main").delay(100).fadeIn(500);
+        }
+    </script>
+    <style>
+
+    </style>
+</head>
+
+
+<body>
+    <div id="main" presentation-id="MuniConS" slide-id="01" class="link" data-page="02">
+        <div id="content" class="noImageCalc" ></div>
+    </div>
+</body>
+
+</html>
