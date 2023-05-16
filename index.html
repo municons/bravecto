@@ -13,47 +13,13 @@
     <script type="text/javascript" src="../js/slideflow.js"></script>
     <link rel="stylesheet" type="text/css" href="../MuniConS_01/css/style.css" />
 </head>
-
-        /*Set Return-Value for PopUps*/
-        sendglobalvalue("returntoid", slide_id);
-
 <body>
     <div id="main" class="link">
         <div id="content" class="noImageCalc" >
-            
-        $(document).ready(function () {
 
-
-            //Slideflow - Main - Start//
-            var getSlidesArr = JSON.parse(localStorage.getItem('hideNav'));
 
         </div> 
     </div>
-
-            /*SWIPE DETECT*/
-            $("#main").on("swipeleft", swipeLeftHandler);
-            function swipeLeftHandler(event) {
-                veevaNavigateSceneWithID(nextslide);
-            }
-            $("#main").on("swiperight", swipeRightHandler);
-            function swipeRightHandler(event) {
-                //veevaNavigateSceneWithID(previousslide);
-            }
-            
-            //load background//
-            var bgimage="url('"+presentation+"_"+slide_id+"-full.jpg')";
-            document.getElementById('content').style.backgroundImage = bgimage;
-            
-            fadebodyin();
-        });
-        
-        function fadebodyin() {
-            $("#main").delay(100).fadeIn(500);
-        }
-    </script>
-    <style>
-
-    </style>
 </head>
 
 
