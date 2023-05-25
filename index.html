@@ -15,8 +15,8 @@
 </head>
 <body>
     <header>
-        <div>
-            <img src="public/bravecto-logo.png" alt="Brand Logo" width="500"/>
+        <div class="logo">
+            <img src="public/bravecto-logo.png" alt="Brand Logo" width="400"/>
         </div>
         <div class="tab_container">
             <div class="tab_on tab_font" id="tab1">
@@ -35,7 +35,154 @@
     </header>
     <main>
         <section id="section1">
-            <h3>section 1</h3>
+            <h2 class="slide_title">Gemeinsam Tiere besser schützen</h2>
+            <div class="chart_card">
+                <div id="geme_title">
+                    <h3>Tierarztpraxis</h3>
+                </div>
+                <div class="gemeinsam_grid">
+                    <div class="justify_center" id="cat">
+                        <img src="public/spot.svg" alt="cat"/>
+                    </div>
+                    <div class="justify_center" id="dog">
+                        <img src="public/alke.svg" alt="dog"/>
+                    </div>
+                    <div id="tierp">
+                        <p>Tierpopulation Deutschland</p>
+                    </div>
+                    <div id="tierp_num1">
+                        <p>10,600,000</p>
+                    </div>
+                    <div id="tierp_num2">
+                        <p>15,200,000</p>
+                    </div>
+                    <div id="behan">
+                        <p>Behandelte Tiere</p>
+                    </div>
+                    <div id="behan_num1">
+                        <p>6,360,000</p>
+                    </div>
+                    <div id="behan_num2">
+                        <p>3,040,000</p>
+                    </div>
+                    <div id="prax">
+                        <p>Praxen mit Kleintieranteil in Deutschland</p>
+                    </div>
+                    <div id="prax_num1">
+                        <p>9,148</p>
+                    </div>
+                    <div id="prax_num2">
+                        <p>9,148</p>
+                    </div>
+                    <div id="anza">
+                        <p>Anzahl Tiere pro Praxis Ø </p>
+                    </div>
+                    <div id="anza_num1">
+                        <p>695</p>
+                    </div>
+                    <div id="anza_num2">
+                        <p>332</p>
+                    </div>
+                    <div id="tiere">
+                        <p>Tiere in Ihrer Praxis</p>
+                    </div>
+                    <div class="justify_left align_center" id="tiere_input1">
+                        <input type="text" id="b12"/>
+                    </div>
+                    <div class="justify_left align_center" id="tiere_input2">
+                        <input type="text" id="c12"/>
+                    </div>
+                    <div id="anteil">
+                        <p>Anteil mit Bravecto behandelte Tiere in Ihrer Praxis %</p>
+                    </div>
+                    <div class="justify_left align_center" id="anteil_input1">
+                        <input type="text" id="b13"/>
+                    </div>
+                    <div class="justify_left align_center" id="anteil_input2">
+                        <input type="text" id="c13"/>
+                    </div>
+                    <div id="abgeg">
+                        <p>Abgegebene Bravecto Behandlungen 2022</p>
+                    </div>
+                    <div class="justify_left align_center" id="abgeg_input1">
+                        <input type="text" id="b14"/>
+                    </div>
+                    <div class="justify_left align_center" id="abgeg_input2">
+                        <input type="text" id="c14"/>
+                    </div>
+                </div>
+            </div>
+            <div class="chart_card monate_cust_height">
+                <div class="monate_grid">
+                    <div id="monate">
+                        <h3>Monate*, die Ihre Patienten geschützt sind</h3>
+                    </div>
+                    <div id="monate_num1"><h3 id="b18"></h3></div>
+                    <div id="monate_num2"><h3 id="c18"></h3></div>
+
+                    <div id="brave">
+                        <p><b>Ø Bravecto Behandlungen pro Tier</b></p>
+                    </div>
+                    <div id="brave_num1"><b><p id="b19"></p></b></div>
+                    <div id="brave_num2"><b><p id="c19"></p></b></div>
+                    <div id="fill_header"></div>
+                    <div id="mit">
+                        <p>mit Bravecto geschützte Monate*</p>
+                    </div>
+                    <div id="mit_num1"><p id="b20"></p></div>
+                    <div id="mit_num2"><p id="c20"></p></div>
+
+                    <div id="unges">
+                        <p>ungeschützte Monate</p>
+                    </div>
+                    <div id="unges_num1"><p id="b21"></p></div>
+                    <div id="unges_num2"><p id="c21"></p></div>
+                </div>
+                <div class="slider_container">
+                    <div class="animal_container">
+                        <img class="block" src="public/spot.svg" alt="cat"/>
+                        <img class="block top_margin" src="public/alke.svg" alt="dog"/>
+                    </div>
+                    <div>
+                        <div class="guage_container">
+                            <div class="guage_slider" id="slider_cat">                        
+                            </div>
+                        </div>
+                        <div class="guage_container top_margin">
+                            <div class="guage_slider"  id="slider_dog"></div>
+                            <p class="bottom_num" style="left:-4">0</p>
+                            <p class="bottom_num" style="left:56px;">1</p>
+                            <p class="bottom_num" style="left:116px;">2</p>
+                            <p class="bottom_num" style="left:176px;">3</p>
+                            <p class="bottom_num" style="left:236px;">4</p>
+                            <p class="bottom_num" style="left:296px;">5</p>
+                            <p class="bottom_num" style="left:356px;">6</p>
+                            <p class="bottom_num" style="left:416px;">7</p>
+                            <p class="bottom_num" style="left:476px;">8</p>
+                            <p class="bottom_num" style="left:536px;">9</p>
+                            <p class="bottom_num" style="left:596px;">10</p>
+                            <p class="bottom_num" style="left:656px;">11</p>
+                            <p class="bottom_num" style="left:716px;">12</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="glossary">
+                            <div class="circle" style="background:#995205;"></div>
+                            <span><p>geschützte Monate</p></span>
+                            <div class="circle" style="background:#f59c00;"></div>
+                            <span><p>ungeschützte Monate</p></span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>Hinweis: Die individuell eingegebenen Daten werden weder gespeichert noch verarbeitet. Sie werden nach der Präsentation sofort gelöscht.
+                </p>
+                <p>
+                    *Die dargestellten Monate sind repräsentativ für das Verhältnis und zur Darstellung eines Bruchteils des ganzjährigen Schutzes. Bravecto bietet einen 12-wöchigen Schutz.**
+                </p>
+            </footer>
         </section>
         <section class="hidden" id="section2">
             <h3>section 2</h3>
@@ -91,9 +238,7 @@
                 <p>**Bravecto® Kautabletten: sofortige und anhaltende abtötende Wirkung gegen Flöhe (Ctenocephalides felis) und Zecken (Ixodes ricinus, Dermacentor reticulatus, D. variabilis) über 12 Wochen und gegen Rhipicephalus sanguineus über 8 Wochen. Anhaltende Zecken-abtötende Wirkung gegen Ixodes hexagonus vom 7. Tag bis zu 12 Wochen nach der Behandlung. Zur Behandlung der durch Demodex canis verursachten Demodikose und Sarcoptes-Räude (Sarcoptes scabiei var. canis). Zur Verringerung des Infektionsrisikos mit Babesia canis canis mittels Übertragung durch Dermacentor reticulatus und mit Dipylidium caninum mittels Übertragung durch Ctenocephalides felis für bis zu 12 Wochen. Die Wirkung erfolgt indirekt durch die Wirksamkeit des Tierarzneimittels gegen die Vektoren.</p>    
             </div>
         </section>
-
     </main>
-
     <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
