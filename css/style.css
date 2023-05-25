@@ -24,6 +24,9 @@ body, html{
 footer {
     margin: 0 3em 50px 3em;
 }
+h1, h2, h3, h4, h5, p, a, button {
+    font-family: "Invention", sans-serif;
+}
 h1{
     color: var(--color-primary-500);
 }
@@ -226,7 +229,7 @@ display: none;
     display:grid;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
-    grid-template-columns: 100px 550px 1fr 1fr;
+    grid-template-columns: 100px 450px 1fr 1fr;
     grid-template-areas: 
     "fill_header monate monate_num1 monate_num2"
     ". brave brave_num1 brave_num2"
@@ -300,7 +303,7 @@ display: none;
 } 
 .guage_container{
     position: relative;
-    width: 720px;
+    width: 600px;
     height: 50px;
     border-radius: 5px;
     background: var(--color-offset-500);
@@ -372,13 +375,17 @@ html {
     justify-self: end;
     align-self: center;
 }
+.base{
+    align-self:flex-start;
+    margin:0;
+}
 .slide_title{
     padding-left: 2em;
 }
 .glossary{
     display: grid;
-    grid-template-columns: repeat(1, 1fr 3fr);
-    gap:1em;
+    grid-template-columns: repeat(1, 20px 1fr);
+    gap: 1em;
  
 }
 .deactivated{background-color:rgba(12,12,12,0.7);}
@@ -398,6 +405,11 @@ html {
         text-align: center;
         border: 5px solid rgba(255,255,255,1);
         animation: pulse 2000ms 1;                       
+}
+.center{
+    margin-left:0 !important;
+    padding-left:0 !important;
+    text-align:center;
 }
 @keyframes pulse{
         00%{
@@ -421,3 +433,50 @@ html {
     display: none;
     transform: rotate(270deg);
 }      
+
+
+
+@font-face {
+	font-family: "Invention";
+	src: url("./fonts/EOT/Invention_W_Rg.eot") format("eot"), url("./fonts/WOFF/Invention_W_Rg.woff") format("woff"), url("./fonts/WOFF2/Invention_W_Rg.woff2") format("woff2");
+	font-weight: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Invention";
+	src: url("./fonts/EOT/Invention_W_It.eot") format("eot"), url("./fonts/WOFF/Invention_W_It.woff") format("woff"), url("./fonts/WOFF2/Invention_W_It.woff2") format("woff2");
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Invention";
+	src: url("./fonts/EOT/Invention_W_Bd.eot") format("eot"), url("./fonts/WOFF/Invention_W_Bd.woff") format("woff"), url("./fonts/WOFF2/Invention_W_Bd.woff2") format("woff2");
+	font-weight: bold;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Invention";
+	src: url("./fonts/EOT/Invention_W_BdIt.eot") format("eot"), url("./fonts/WOFF/Invention_W_BdIt.woff") format("woff"), url("./fonts/WOFF2/Invention_W_BdIt.woff2") format("woff2");
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Invention Light";
+	src: url("./fonts/EOT/Invention_W_Lt.eot") format("eot"), url("./fonts/WOFF/Invention_W_Lt.woff") format("woff"), url("./fonts/WOFF2/Invention_W_Lt.woff2") format("woff2");
+	font-weight: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Invention Light";
+	src: url("./fonts/EOT/Invention_W_LtIt.eot") format("eot"), url("./fonts/WOFF/Invention_W_LtIt.woff") format("woff"), url("./fonts/WOFF2/Invention_W_LtIt.woff2") format("woff2");
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
