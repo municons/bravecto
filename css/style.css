@@ -33,7 +33,9 @@ h2, h3{
 h4, h5, p{
     color: var(--color-font);
 }
-
+p{
+    font-size: 14pt;
+}
 .tab_container {
     width:100%;
     border-top-color: var(--color-secondary-700);
@@ -101,7 +103,7 @@ display: none;
 }
 .chart_card{
     margin: 1em 3em 3em 3em;
-    background: #d8d8d8
+    background: #eeeeee;
     border-radius: 15px;
     -moz-border-radius:15px;
     -webkit-border-radius:15px;
@@ -353,7 +355,7 @@ html {
     padding-left: 1em;
 }
 .monate_cust_height{
-    height: 400px;
+    height: 420px;
 }
 
 .top_margin{
