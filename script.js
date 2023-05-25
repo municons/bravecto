@@ -151,11 +151,11 @@ function popB18(){
         b19.innerHTML = (dogTreatmentsDeliv/(dogNum*.01*dogPercentTreated)).toFixed(1);
         b20.innerHTML = months;
         b21.innerHTML = (12-months).toFixed(1);
-        if(months*60<=720){
-            sliderDog.style.width = (months*60).toString() + "px" 
+        if(months*50<=600){
+            sliderDog.style.width = (months*50).toString() + "px" 
         }
         else{
-            sliderDog.style.width = "720px"
+            sliderDog.style.width = "600px"
         }
     }
     else {
@@ -173,11 +173,11 @@ function popC18(){
         c19.innerHTML = (catTreatmentsDeliv/(catNum*.01*catPercentTreated)).toFixed(1);
         c20.innerHTML = months;
         c21.innerHTML = (12-months).toFixed(1);
-        if(months*60<=720){
-            sliderCat.style.width = (months*60).toString() + "px" 
+        if(months*50<=600){
+            sliderCat.style.width = (months*50).toString() + "px" 
         }
         else{
-            sliderCat.style.width = "720px"
+            sliderCat.style.width = "600px"
         }
     }
     else {
