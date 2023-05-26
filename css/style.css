@@ -550,9 +550,13 @@ html {
     "brave_23_bg brave_23_bg_dog brave_23_bg_cat brave_23_bg_dogcat brave_23_bg_dogcat"
     "brave_23_b brave_23_b_dog brave_23_b_cat brave_23_b_dogcat brave_23_b_dogcat"
     ". . . . ."
-    "final1 final1 final1_num1 final1_num2 final1_num2"
-    "final2 final2 final2_num1 final2_num2 final2_num2"
-    "final3 final3 final3_num1 final3_num2 final3_num2";
+    "final1 final1_num1 final1_num2 . ."
+    "final2 final2_num1 final2_num2 . ."
+    "final3 final3_num1 final3_num2 . .";
+}
+.space_around{
+    display: flex;
+    justify-content: space-around;
 }
 #brave_22, #brave_23_bg, #brave_23_b{
     padding-left:1em;
@@ -597,7 +601,7 @@ html {
 #brave_23_bg_cat{
     grid-area: brave_23_bg_cat;
 }
-#brave_23_bg_dodcat{
+#brave_23_bg_dogcat{
     grid-area: brave_23_bg_dogcat;
 }
 #brave_23_b{
@@ -609,19 +613,10 @@ html {
 #brave_23_b_cat{
     grid-area: brave_23_b_cat;
 }
-#brave_23_b_dodcat{
+#brave_23_b_dogcat{
     grid-area: brave_23_b_dogcat;
 }
 
-.monate_grid2{
-    display: grid;
-    margin-top:2em;
-    grid-template-columns: 6fr 2fr 2fr 1fr 1fr;
-    grid-template-areas:
-    "final1 final1 final1_num1 final1_num2 final1_num2"
-    "final2 final2 final2_num1 final2_num2 final2_num2"
-    "final3 final3 final3_num1 final3_num2 final3_num2";
-}
 #final1, #final2, #final3{
     padding-left: 1em;
 }
