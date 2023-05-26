@@ -88,6 +88,7 @@ b12.addEventListener("input", (event)=>{
         event.target.value = null;
     }
     popB18();
+    popMonateDog()
 });
 c12.addEventListener("input", (event)=>{
     if(Number.isInteger(+event.target.value)){
@@ -98,6 +99,7 @@ c12.addEventListener("input", (event)=>{
         event.target.value = null;
     }
     popC18();
+    popMonateCat()
 });
 b13.addEventListener("input", (event)=>{
     if(Number.isInteger(+event.target.value) 
@@ -132,6 +134,7 @@ b14.addEventListener("input", (event)=>{
         event.target.value = null;
     }
     popB18();
+    popBraveDog()
 });
 c14.addEventListener("input", (event)=>{
     if(Number.isInteger(+event.target.value)){
@@ -142,6 +145,7 @@ c14.addEventListener("input", (event)=>{
         event.target.value = null;
     }
     popC18();
+    popBraveCat();
 });
 
 function popB18(){
@@ -188,3 +192,153 @@ function popC18(){
         sliderCat.style.width = "0px"
     }
 }
+
+var monate3DogP = document.getElementById('monate3_dog_p');
+var monate3CatP = document.getElementById('monate3_cat_p');
+var monate3DogCatP = document.getElementById('monate3_dogcat_p');
+var monate6DogP = document.getElementById('monate6_dog_p');
+var monate6CatP = document.getElementById('monate6_cat_p');
+var monate6DogCatP = document.getElementById('monate6_dogcat_p');
+var monate9DogP = document.getElementById('monate9_dog_p');
+var monate9CatP = document.getElementById('monate9_cat_p');
+var monate9DogCatP = document.getElementById('monate9_dogcat_p');
+var ganzjDogP = document.getElementById('ganzj_dog_p');
+var ganzjCatP = document.getElementById('ganzj_cat_p');
+var ganzjDogCatP = document.getElementById('ganzj_dogcat_p');
+
+function popMonateDog(){
+    if(dogNum != null){
+        monate3DogP.innerHTML = prettyNum(dogNum.toString());
+        monate6DogP.innerHTML = prettyNum((dogNum*2).toString());
+        monate9DogP.innerHTML = prettyNum((dogNum*3).toString());
+        ganzjDogP.innerHTML = prettyNum((dogNum*4).toString());
+    }
+    else{
+        monate3DogP.innerHTML = null;
+        monate6DogP.innerHTML = null;
+        monate9DogP.innerHTML = null;
+        ganzjDogP.innerHTML = null;
+    }
+    popMonteDogCat();
+}
+
+function popMonateCat(){
+    if(catNum != null){
+        monate3CatP.innerHTML = prettyNum(catNum.toString());
+        monate6CatP.innerHTML = prettyNum((catNum*2).toString());
+        monate9CatP.innerHTML = prettyNum((catNum*3).toString());
+        ganzjCatP.innerHTML = prettyNum((catNum*4).toString());
+    }
+    else{
+        monate3CatP.innerHTML = null;
+        monate6CatP.innerHTML = null;
+        monate9CatP.innerHTML = null;
+        ganzjCatP.innerHTML = null;
+    }
+    popMonteDogCat();
+}
+
+function popMonteDogCat(){
+    if(catNum != null && dogNum != null){
+        monate3DogCatP.innerHTML = prettyNum((dogNum+catNum).toString());
+        monate6DogCatP.innerHTML = prettyNum(((dogNum+catNum)*2).toString());
+        monate9DogCatP.innerHTML = prettyNum(((dogNum+catNum)*3).toString());
+        ganzjDogCatP.innerHTML = prettyNum(((dogNum+catNum)*4).toString());
+    }
+    else{
+
+    }
+}
+
+
+function prettyNum(strIn){
+    let length = strIn.length;
+    if (length>3){
+        arrIn = strIn.split('');
+        index = length-3;
+        arrIn.splice(index, 0, '.');
+        strOut = arrIn.join('');
+        return strOut;
+    }
+    else return strIn
+    
+}
+
+var brave22Dog = document.getElementById('brave_22_dog_p');
+var brave22Cat = document.getElementById('brave_22_cat_p');
+var brave22DogCat = document.getElementById('brave_22_dogcat_p')
+var brave23BgDog = document.getElementById('brave_23_bg_dog_p');
+var brave23BgCat = document.getElementById('brave_23_bg_cat_p');
+var brave23BgDogCat = document.getElementById('brave_23_bg_dogcat_p')
+var brave23BDog = document.getElementById('brave_23_b_dog_p');
+var brave23BCat = document.getElementById('brave_23_b_cat_p');
+var brave23BDogCat = document.getElementById('brave_23_b_dogcat_p')
+
+var final1Num1 = document.getElementById('final1_num1_p')
+var final1Num2 = document.getElementById('final1_num2_p')
+var final2Num1 = document.getElementById('final2_num1_p')
+var final2Num2 = document.getElementById('final2_num2_p')
+var final3Num1 = document.getElementById('final3_num1_p')
+var final3Num2 = document.getElementById('final3_num2_p')
+
+var braveDogNum;
+var braveCatNum;
+
+brave23BgDog.addEventListener("input", (event)=>{
+    if(Number.isInteger(+event.target.value)){
+        braveDogNum = +event.target.value;
+    }
+    else{
+        braveDogNum = null;
+        event.target.value = null;
+    }
+    popBrave23BGDogCat();
+});
+brave23BgCat.addEventListener("input", (event)=>{
+    if(Number.isInteger(+event.target.value)){
+        braveCatNum = +event.target.value;
+    }
+    else{
+        braveCatNum = null;
+        event.target.value = null;
+    }
+    popBrave23BGDogCat();
+});
+function popBraveDog(){
+    if(dogTreatmentsDeliv != null){
+        brave22Dog.innerHTML = prettyNum(dogTreatmentsDeliv.toString());
+    }
+    else{
+        brave22Dog.innerHTML = null;
+    }
+    popBraveDogCat();
+}
+
+function popBraveCat(){
+    if(catTreatmentsDeliv != null){
+        brave22Cat.innerHTML = prettyNum(catTreatmentsDeliv.toString());
+    }
+    else{
+        brave22Cat.innerHTML = null;
+    }
+    popBraveDogCat();
+}
+
+function popBraveDogCat(){
+    if(dogTreatmentsDeliv != null && catTreatmentsDeliv != null){
+        brave22DogCat.innerHTML = prettyNum((dogTreatmentsDeliv+catTreatmentsDeliv).toString())
+    }
+    else{
+        brave22DogCat.innerHTML = null;
+    }
+    
+}
+function popBrave23BGDogCat(){
+    if(braveDogNum != null && braveCatNum != null){
+        brave23BgDogCat.innerHTML = prettyNum((braveDogNum+braveCatNum).toString());
+    }
+    else{
+        brave23BgDogCat.innerHTML = null;
+    }
+}
+
