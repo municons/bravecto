@@ -250,9 +250,9 @@ function contentSwap(on){
 }
 function popB18(){
     if (dogNum != null && dogPercentTreated != null && dogTreatmentsDeliv != null){
-        let months = (dogTreatmentsDeliv/(dogNum*.01*dogPercentTreated)*3).toFixed(1);
+        monthsDog = (dogTreatmentsDeliv/(dogNum*.01*dogPercentTreated)*3);
+        let months = monthsDog.toFixed(1);
         b18.innerHTML = months.toString().replace('.',',');
-        monthsDog = months;
         b19.innerHTML = (dogTreatmentsDeliv/(dogNum*.01*dogPercentTreated)).toFixed(1).toString().replace('.',',');
         b20.innerHTML = months.toString().replace('.',',');
         b21.innerHTML = (12-months).toFixed(1).toString().replace('.',',');
@@ -279,9 +279,9 @@ function popB18(){
 }
 function popC18(){
     if (catNum != null && catPercentTreated != null && catTreatmentsDeliv != null){
-        let months = (catTreatmentsDeliv/(catNum*.01*catPercentTreated)*3).toFixed(1);
+        monthsCat = (catTreatmentsDeliv/(catNum*.01*catPercentTreated)*3);
+        let months = monthsCat.toFixed(1);
         c18.innerHTML = months.toString().replace('.',',');
-        monthsCat = months;
         c19.innerHTML = (catTreatmentsDeliv/(catNum*.01*catPercentTreated)).toFixed(1).toString().replace('.',',');
         c20.innerHTML = months.toString().replace('.',',');
         c21.innerHTML = (12-months).toFixed(1).toString().replace('.',',');
@@ -418,7 +418,6 @@ function popBrave23BCat(){
 }
 function popBrave23bDogCat(){
     if(brave23BDog_num != null && brave23BCat_num != null){
-        console.log(Math.round(brave23BDog_num + brave23BCat_num));
         brave23BDogCat.innerHTML = prettyNum(Math.round(brave23BDog_num + brave23BCat_num).toString());
     }
     else{
