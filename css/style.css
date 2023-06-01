@@ -40,7 +40,7 @@ h1{
 h2, h3{
     color: var(--color-secondary-500);
 }
-h4, h5, p{
+h4, h5, p, input{
     color: var(--color-font);
 }
 p, input{
@@ -678,7 +678,10 @@ html {
 #final3_num2{
     grid-area:final3_num2;
 }
-
+.highlight{
+    background: var(--color-secondary-500);
+    filter: brightness(1);
+}
 
 .bgperctext{
 	position:relative;
