@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <!-- NORMAL SLIDE -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <script type="text/javascript" src="js/noBounce.js"></script>
+    <script type="text/javascript" src="js/veeva-library.js"></script>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="js/general_online.js"></script>
+    <script type="text/javascript" src="js/globals.js"></script>
+    <script type="text/javascript" src="js/slideflow.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+    <div id="main" presentation-id="bravecto" slide-id="01"></div>
+    <header>
+        <div class="logo">
+            <img src="public/bravecto-logo.png" alt="Brand Logo" width="400"/>
+        </div>
+        <div class="tab_container">
+            <div class="tab_on tab_font" id="tab1">
+                <h3>Ganzjährigkeit</h3>
+            </div>
+            <div class="tab_off tab_font" id="tab2">
+                <h3>Behandlungspotential</h3>
+            </div>
+            <div class="tab_off tab_font" id="tab3">
+                <h3>Quellen</h3>
+            </div>
+            <div class="tab_off tab_font" id="tab4">
+                <h3>Datenschutz</h3>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="section1">
+            <h2 class="slide_title">Gemeinsam Tiere besser schützen</h2>
+            <div class="chart_card">
+                <div id="geme_title">
+                    <h3>Tierarztpraxis</h3>
+                </div>
+                <div class="gemeinsam_grid">
+                    <div class="justify_center" id="cat">
+                        <img src="public/spot.svg" alt="cat"/>
+                    </div>
+                    <div class="justify_center" id="dog">
+                        <img src="public/alke.svg" alt="dog"/>
+                    </div>
+                    <div id="tierp">
+                        <p>Tierpopulation Deutschland</p>
+                    </div>
+                    <div id="tierp_num1">
+                        <p class="center">10.600.000</p>
+                    </div>
+                    <div id="tierp_num2">
+                        <p class="center">15.200.000</p>
+                    </div>
+                    <div id="behan">
+                        <p>Behandelte Tiere</p>
+                    </div>
+                    <div id="behan_num1">
+                        <p class="center">6.360.000</p>
+                    </div>
+                    <div id="behan_num2">
+                        <p class="center">3.040.000</p>
+                    </div>
+                    <div id="prax">
+                        <p>Praxen mit Kleintieranteil in Deutschland</p>
+                    </div>
+                    <div id="prax_num1">
+                        <p class="center">9.148</p>
+                    </div>
+                    <div id="prax_num2">
+                        <p class="center">9.148</p>
+                    </div>
+                    <div id="anza">
+                        <p>Anzahl Tiere pro Praxis Ø </p>
+                    </div>
+                    <div id="anza_num1">
+                        <p class="center">695</p>
+                    </div>
+                    <div id="anza_num2">
+                        <p class="center">332</p>
+                    </div>
+                    <div id="tiere">
+                        <p>Tiere in Ihrer Praxis</p>
+                    </div>
+                    <div class="justify_center align_center" id="tiere_input1">
+                        <input class="center" type="text" id="b12"/>
+                    </div>
+                    <div class="justify_center align_center" id="tiere_input2">
+                        <input class="center" type="text" id="c12"/>
+                    </div>
+                    <div id="anteil">
+                        <p>Anteil mit Bravecto behandelte Tiere in Ihrer Praxis %</p>
+                    </div>
+                    <div class="justify_center align_center" style="position:relative;" id="anteil_input1">
+                        <input class="center" type="text" id="b13"/>
+                        <div style="position: absolute; top: 0; left: 114px;"><p>%</p></div>
+                    </div>
+                    <div class="justify_center align_center" style="position:relative;"  id="anteil_input2">
+                        <input class="center" type="text" id="c13"/>
+                        <div style="position: absolute; top: 0; left: 114px;"><p>%</p></div>
+                    </div>
+                    <div id="abgeg">
+                        <p>Abgegebene Bravecto Behandlungen 2022</p>
+                    </div>
+                    <div class="justify_center align_center" id="abgeg_input1">
+                        <input class="center" type="text" id="b14"/>
+                        
+                    </div>
+                    <div class="justify_center align_center" id="abgeg_input2">
+                        <input class="center" type="text" id="c14"/>
+                    </div>
+                </div>
+            </div>
+            <div class="chart_card monate_cust_height">
+                <div class="monate_grid">
+                    <div id="monate">
+                        <h3>Monate*, die Ihre Patienten geschützt sind</h3>
+                    </div>
+                    <div id="monate_num1"><h3 class="center" id="b18"></h3></div>
+                    <div id="monate_num2"><h3 class="center" id="c18"></h3></div>
+
+                    <div id="brave">
+                        <p><b>Ø Bravecto Behandlungen pro Tier</b></p>
+                    </div>
+                    <div id="brave_num1"><b><p class="center" id="b19"></p></b></div>
+                    <div id="brave_num2"><b><p class="center" id="c19"></p></b></div>
+                    <div id="fill_header"></div>
+                    <div id="mit">
+                        <p>mit Bravecto geschützte Monate*</p>
+                    </div>
+                    <div id="mit_num1"><p class="center" id="b20"></p></div>
+                    <div id="mit_num2"><p class="center" id="c20"></p></div>
+
+                    <div id="unges">
+                        <p>ungeschützte Monate</p>
+                    </div>
+                    <div id="unges_num1"><p class="center" id="b21"></p></div>
+                    <div id="unges_num2"><p class="center" id="c21"></p></div>
+                </div>
+                <div class="slider_container">
+                    <div class="animal_container">
+                        <img class="block" src="public/spot.svg" alt="cat"/>
+                        <img class="block top_margin" src="public/alke.svg" alt="dog"/>
+                    </div>
+                    <div>
+                        <div class="guage_container">
+                            <div class="guage_slider" id="slider_cat">                        
+                            </div>
+                        </div>
+                        <div class="guage_container top_margin">
+                            <div class="guage_slider"  id="slider_dog"></div>
+                            <p class="bottom_num" style="left:-8">0</p>
+                            <p class="bottom_num" style="left:42px;">1</p>
+                            <p class="bottom_num" style="left:92px;">2</p>
+                            <p class="bottom_num" style="left:142px;">3</p>
+                            <p class="bottom_num" style="left:192px;">4</p>
+                            <p class="bottom_num" style="left:242px;">5</p>
+                            <p class="bottom_num" style="left:292px;">6</p>
+                            <p class="bottom_num" style="left:342px;">7</p>
+                            <p class="bottom_num" style="left:392px;">8</p>
+                            <p class="bottom_num" style="left:442px;">9</p>
+                            <p class="bottom_num" style="left:492px;">10</p>
+                            <p class="bottom_num" style="left:542px;">11</p>
+                            <p class="bottom_num" style="left:592px;">12</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="glossary">
+                            <div class="circle" style="background:#995205;position: relative;background: #602c6b;top: -13px;"></div>
+                            <span><p style="position:relative;top:-10px;">geschützte<br>Monate</p></span>
+                            <div class="circle base" style="background:#f59c00;position: relative;background: #c63231;top: -11px;"></div>
+                            <span><p class="base" style="position:relative;top:-25px;">ungeschützte<br>Monate</p></span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>Hinweis: Die individuell eingegebenen Daten werden weder gespeichert noch verarbeitet. Sie werden nach der Präsentation sofort gelöscht.
+                </p>
+                <p>
+                    *Die dargestellten Monate sind repräsentativ für das Verhältnis und zur Darstellung eines Bruchteils des ganzjährigen Schutzes. Bravecto bietet einen 12-wöchigen Schutz.**
+                </p>
+                <div style="height:20px;"></div>
+            </footer>
+        </section>
+        <section class="hidden" id="section2">
+            <div class="chart_card margin_top_2">
+                <div class="behand_grid">
+                    <div id="behand_title">
+                        <h3>Tierarztpraxis</h3>
+                    </div>
+                    <div class="justify_center" id="dog2">
+                        <img src="public/alke.svg" alt="dog"/>
+                    </div>
+                    <div class="justify_center" id="cat2">
+                        <img src="public/spot.svg" alt="cat"/>
+                    </div>
+                    <div class="justify_center" id="dog3">
+                        <img src="public/alke.svg" alt="dog"/>
+                    </div>
+                    <div class="justify_center" id="cat3">
+                        <img src="public/spot.svg" alt="cat"/>
+                    </div>
+                    <div id="ihr">
+                        <p><b>Ihr Potential: Behandlungen</b></p>
+                    </div>
+                    <div id="monate3">
+                        <p>3 Monate* Schutz</p>
+                    </div>
+                    <div id="monate3_dog"><p class="center" id="monate3_dog_p"></p></div>
+                    <div id="monate3_cat"><p class="center" id="monate3_cat_p"></p></div>
+                    <div id="monate3_dogcat"><p class="center" id="monate3_dogcat_p"></p></div>
+                    <div id="monate6">
+                        <p>6 Monate* Schutz</p>
+                    </div>
+                    <div id="monate6_dog"><p class="center" id="monate6_dog_p"></p></div>
+                    <div id="monate6_cat"><p class="center" id="monate6_cat_p"></p></div>
+                    <div id="monate6_dogcat"><p class="center" id="monate6_dogcat_p"></p></div>
+                    <div id="monate9">
+                        <p>9 Monate* Schutz</p>
+                    </div>
+                    <div id="monate9_dog"><p class="center" id="monate9_dog_p"></p></div>
+                    <div id="monate9_cat"><p class="center" id="monate9_cat_p"></p></div>
+                    <div id="monate9_dogcat"><p class="center" id="monate9_dogcat_p"></p></div>
+                    <div id="ganzj">
+                        <p>Ganzjähriger* Schutz</p>
+                    </div>
+                    <div id="ganzj_dog"><p class="center" id="ganzj_dog_p"></p></div>
+                    <div id="ganzj_cat"><p class="center" id="ganzj_cat_p"></p></div>
+                    <div id="ganzj_dogcat"><p class="center" id="ganzj_dogcat_p"></p></div>
+                </div>
+            </div>
+            <div class="chart_card margin_top_2">
+                <div class="brave_grid">
+                    <div id="brave_22" class="align_center" >
+                        <h3>Bravecto Behandlungen 2022</h3>
+                    </div>
+                    <div id="brave_22_dog" class="justify_center align_center" >
+                        <p id="brave_22_dog_p" class="justify_center" ></p>
+                    </div>
+                    <div id="brave_22_cat" class="justify_center align_center" >
+                        <p id="brave_22_cat_p" class="justify_center" ></p>
+                    </div>
+                    <div id="brave_22_dogcat" class="justify_center align_center">
+                        <p id="brave_22_dogcat_p"></p>
+                    </div>
+                    <div id="brave_23_bg" class="justify_left align_center" >
+                        <p>Bravecto Behandlungen 2023 bisher gekauft</p>
+                    </div>
+                    <div id="brave_23_bg_dog" class="justify_center align_center">
+                        <input class="center" id="brave_23_bg_dog_p" type="text"/>
+                    </div>
+                    <div id="brave_23_bg_cat" class="justify_center align_center">
+                        <input class="center" id="brave_23_bg_cat_p" type="text"/>
+                    </div>
+                    <div class="justify_center align_center" id="brave_23_bg_dogcat">
+                        <p id="brave_23_bg_dogcat_p"></p>
+                    </div>
+                    <div id="brave_23_b" class="justify_left align_center highlight">
+                        <p style="color:white">Bravecto Behandlungen 2023 benötigt</p>
+                    </div>
+                    <div id="brave_23_b_dog" class="justify_center align_center highlight">
+                        <p id="brave_23_b_dog_p" style="color:white"></p>
+                    </div>
+                    <div id="brave_23_b_cat" class="justify_center align_center highlight">
+                        <p id="brave_23_b_cat_p" style="color:white"></p>
+                    </div>
+                    <div id="brave_23_b_dogcat" class="justify_center align_center highlight">
+                        <p class="center" id="brave_23_b_dogcat_p" style="color:white"></p>
+                    </div>
+
+
+                    <div id="final1" class="justify_left align_center">
+                        <p>Monate*, die Ihre Patienten mit Bravecto geschützt waren 2022</p>
+                    </div>
+                    <div id="final1_num1" class="justify_center align_center">
+                        <p id="final1_num1_p"></p>
+                    </div>
+                    <div id="final1_num2" class="justify_center align_center">
+                        <p id="final1_num2_p"></p>
+                    </div>
+                    <div id="final2" class="justify_left align_center">
+                        <p>Monate*, die Ihre Patienten in 2023 mit Bravecto mit den bisher gekauften Mengen geschützt werden</p>
+                    </div>
+                    <div id="final2_num1" class="justify_center align_center">
+                        <p id="final2_num1_p"></p>
+                    </div>
+                    <div id="final2_num2" class="justify_center align_center">
+                        <p id="final2_num2_p"></p>
+                    </div>
+                    <div id="final3" class="justify_left align_center">
+                        <p>Wie viele Monate* möchten Sie Ihre Patienten schützen?</p>
+                    </div>
+                    <div id="final3_num1" class="justify_center align_center">
+                        <input class="center" type="text" id="final3_num1_p"/>
+                    </div>
+                    <div id="final3_num2" class="justify_center align_center">
+                        <input class="center" type="text" id="final3_num2_p"/>
+                    </div>
+                </div>
+            </div>
+            <div class="subtext">
+                <p>Hinweis: Die individuell eingegebenen Daten werden weder gespeichert noch verarbeitet. Sie werden nach der Präsentation sofort gelöscht.</p>
+            </div>
+            <div class="subtext">
+                <p>*Die dargestellten Monate sind repräsentativ für das Verhältnis und zur Darstellung eines Bruchteils des ganzjährigen Schutzes. Bravecto bietet einen 12-wöchigen Schutz.**</p>
+            </div>
+            <div style="height:20px;"></div>
+        </section>
+        <section class="hidden" id="section3">
+            <div class="border_padding justify_center">
+                <h3>Quellenangaben</h3>
+            </div>
+            <div class="chart_card" style="padding:2em;">
+                <div class="quallen_container"> 
+                    <div>
+                        <p><b>Anzahl Hunde</b></p>
+                    </div>
+                    <div>
+                        <p>IVH-Der Deutsche Heimtiermarkt 2022</p>
+                    </div>
+                    
+                    <div>
+                        <p><b>Anzahl Katzen</b></p>
+                    </div>
+                    <div>
+                        <p>IVH-Der Deutsche Heimtiermarkt 2022</p>
+                    </div>
+                    
+                    <div>
+                        <p><b>Anzahl behandelte Hunde</b></p>
+                    </div>
+                    <div>
+                        <p>Geschätzt 60 % der Hundepopulation in Deutschland ist unter tierärztlicher Behandlung.</p>
+                    </div>
+                    
+                    <div>
+                        <p><b>Anzahl behandelte Katzen</b></p>
+                    </div>
+                    <div>
+                        <p>Geschätzt 20 % der Katzenpopulation in Deutschland ist unter tierärztlicher Behandlung.</p>
+                    </div>
+                    
+                    <div>
+                        <p><b>Praxen mit Kleintieranteil in Deutschland</b></p>
+                    </div>
+                    <div>
+                        <p>Dt TÄ-Blatt 2022; 70 (6); Seite 764</p>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <section class="hidden" id="section4">
+            <div style="display:flex; justify-content: space-between; padding-right:50px;">
+                <img src="public/msd-ah-logo.png" alt="MSD logo" width="375"/>
+                <img src="public\20210202_MEHR_WERT_PRAEVENTION_Logo_MSD_Pantone.gif" alt="alt-logo" style="height:100px; align-self:center;"/>
+            </div>
+            
+            <div class="border_padding">
+                <p>© 2023 Intervet International B.V., also known as MSD Animal Health.</p>
+                <p>All rights reserved. All trademarks are property of their respective owners.</p>
+                <a href="https://www.msd-tiergesundheit.de/datenschutz/" target=”_blank” style="font-size:14pt;">Datenschutz</a>
+                <p><b>Hinweis: Die individuell eingegebenen Daten werden weder gespeichert noch verarbeitet. Sie werden nach der Präsentation sofort gelöscht.</b></p>
+                <p>**Bravecto® Kautabletten: sofortige und anhaltende abtötende Wirkung gegen Flöhe (Ctenocephalides felis) und Zecken (Ixodes ricinus, Dermacentor reticulatus, D. variabilis) über 12 Wochen und gegen Rhipicephalus sanguineus über 8 Wochen. Anhaltende Zecken-abtötende Wirkung gegen Ixodes hexagonus vom 7. Tag bis zu 12 Wochen nach der Behandlung. Zur Behandlung der durch Demodex canis verursachten Demodikose und Sarcoptes-Räude (Sarcoptes scabiei var. canis). Zur Verringerung des Infektionsrisikos mit Babesia canis canis mittels Übertragung durch Dermacentor reticulatus und mit Dipylidium caninum mittels Übertragung durch Ctenocephalides felis für bis zu 12 Wochen. Die Wirkung erfolgt indirekt durch die Wirksamkeit des Tierarzneimittels gegen die Vektoren.</p>    
+            </div>
+            <div style="height:20px;"></div>
+        </section>
+    </main>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
