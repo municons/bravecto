@@ -18,6 +18,9 @@ var catTreatmentsDeliv;
 
 var monthsDog;
 var monthsCat;
+
+var jahrNum2Cat;
+var jahrNum1Dog;
 ///////////////////////////////////////////////////////////////////
 ////////////////// Elements //////////////////////////////////////
 
@@ -84,6 +87,9 @@ var ganzjDogP = document.getElementById('ganzj_dog_p');
 var ganzjCatP = document.getElementById('ganzj_cat_p');
 var ganzjDogCatP = document.getElementById('ganzj_dogcat_p');
 
+var jahrNum1 = document.getElementById('jahr_num1_p');
+var jahrNum2 = document.getElementById('jahr_num2_p');
+var jahrNum3 = document.getElementById('jahr_num3_p');
 
 
 ///////////////////////////////////////////////////////////////////
@@ -206,6 +212,7 @@ brave23BgDog.addEventListener("input", (event)=>{
     }
     popBrave23BGDogCat();
     popFinal2Num1();
+    popJahrNum1();
 });
 brave23BgCat.addEventListener("input", (event)=>{
     if(Number.isInteger(+event.target.value)){
@@ -217,6 +224,7 @@ brave23BgCat.addEventListener("input", (event)=>{
     }
     popBrave23BGDogCat();
     popFinal2Num2();
+    popJahrNum2();
 });
 
 
@@ -256,7 +264,8 @@ function contentSwap(on){
 function popB18(){
     if (dogNum != null && dogPercentTreated != null && dogTreatmentsDeliv != null){
         monthsDog = (dogTreatmentsDeliv/(dogNum*.01*dogPercentTreated)*3);
-        let months = monthsDog.toFixed(1);
+        //let months = monthsDog.toFixed(1);
+        let months = Math.floor(monthsDog);
         b18.innerHTML = months.toString().replace('.',',');
         b19.innerHTML = (dogTreatmentsDeliv/(dogNum*.01*dogPercentTreated)).toFixed(1).toString().replace('.',',');
         b20.innerHTML = months.toString().replace('.',',');
@@ -285,7 +294,8 @@ function popB18(){
 function popC18(){
     if (catNum != null && catPercentTreated != null && catTreatmentsDeliv != null){
         monthsCat = (catTreatmentsDeliv/(catNum*.01*catPercentTreated)*3);
-        let months = monthsCat.toFixed(1);
+        //  let months = monthsCat.toFixed(1);
+        let months = Math.floor(monthsCat);
         c18.innerHTML = months.toString().replace('.',',');
         c19.innerHTML = (catTreatmentsDeliv/(catNum*.01*catPercentTreated)).toFixed(1).toString().replace('.',',');
         c20.innerHTML = months.toString().replace('.',',');
@@ -402,7 +412,8 @@ function popBrave23BGDogCat(){
 function popBrave23BDog(){
     if(final3Num1_num != null && monthsDog != null && dogTreatmentsDeliv != null){
         brave23BDog.innerHTML = prettyNum(Math.round(final3Num1_num*(dogTreatmentsDeliv/monthsDog)).toString());
-        brave23BDog_num = final3Num1_num*(dogTreatmentsDeliv/monthsDog);
+        brave23BDog_num = Math.round(final3Num1_num*(dogTreatmentsDeliv/monthsDog));
+        popJahrNum1();
     }
     else{
         brave23BDog.innerHTML = null;
@@ -412,8 +423,10 @@ function popBrave23BDog(){
 }
 function popBrave23BCat(){
     if(final3Num2_num != null && monthsCat != null && catTreatmentsDeliv != null){
+        // was Math.round
         brave23BCat.innerHTML = prettyNum(Math.round(final3Num2_num*(catTreatmentsDeliv/monthsCat)).toString());
-        brave23BCat_num = final3Num2_num*(catTreatmentsDeliv/monthsCat);
+        brave23BCat_num = Math.round(final3Num2_num*(catTreatmentsDeliv/monthsCat));
+        popJahrNum2()
     }
     else{
         brave23BCat.innerHTML = null;
@@ -423,6 +436,7 @@ function popBrave23BCat(){
 }
 function popBrave23bDogCat(){
     if(brave23BDog_num != null && brave23BCat_num != null){
+        // was Math.round
         brave23BDogCat.innerHTML = prettyNum(Math.round(brave23BDog_num + brave23BCat_num).toString());
     }
     else{
@@ -431,7 +445,8 @@ function popBrave23bDogCat(){
 }
 function popFinal2Num1(){
     if(braveDogNum != null && monthsDog != null && dogTreatmentsDeliv != null){
-        final2Num1.innerHTML = (braveDogNum*(monthsDog/dogTreatmentsDeliv)).toFixed(1).toString().replace('.',',');
+        //final2Num1.innerHTML = (braveDogNum*(monthsDog/dogTreatmentsDeliv)).toFixed(1).toString().replace('.',',');
+        final2Num1.innerHTML = Math.floor((braveDogNum*(monthsDog/dogTreatmentsDeliv))).toString();
     }
     else{
         final2Num1.innerHTML = null;
@@ -439,10 +454,39 @@ function popFinal2Num1(){
 }
 function popFinal2Num2(){
     if(braveCatNum != null && monthsCat != null && catTreatmentsDeliv != null){
-        final2Num2.innerHTML = (braveCatNum*(monthsCat/catTreatmentsDeliv)).toFixed(1).toString().replace('.',',');
+        //final2Num2.innerHTML = (braveCatNum*(monthsCat/catTreatmentsDeliv)).toFixed(1).toString().replace('.',',');
+        final2Num2.innerHTML = Math.floor((braveCatNum*(monthsCat/catTreatmentsDeliv))).toString();
     }
     else{
         final2Num2.innerHTML = null;
+    }
+}
+function popJahrNum1(){
+    if(brave23BDog_num != null && braveDogNum != null){
+        jahrNum1.innerHTML = (brave23BDog_num - braveDogNum).toString();
+        jahrNum1Dog = brave23BDog_num - braveDogNum;
+        popJahrNum3();
+    }
+    else {
+        jahrNum1.innerHTML = null;
+    }
+}
+function popJahrNum2(){
+    if(brave23BCat_num != null && braveCatNum != null){
+        jahrNum2.innerHTML = (brave23BCat_num - braveCatNum).toString();
+        jahrNum2Cat = brave23BCat_num - braveCatNum;
+        popJahrNum3();
+    }
+    else {
+        jahrNum2.innerHTML = null;
+    }
+}
+function popJahrNum3(){
+    if(jahrNum1Dog != null && jahrNum2Cat != null){
+        jahrNum3.innerHTML = jahrNum1Dog + jahrNum2Cat;
+    }
+    else {
+        jahrNum3.innerHTML = null;
     }
 }
 
