@@ -31,7 +31,7 @@ footer {
     margin-left:3em;
     margin-right:3em;
 }
-h1, h2, h3, h4, h5, p, a, button, input, span {
+h1, h2, h3, h4, h5, p, a, button, input, span, div {
     font-family: "Invention", sans-serif;
 }
 h1{
@@ -115,7 +115,7 @@ display: none;
     padding-left: 1em;
 }
 .chart_card{
-    margin: 1em 3em 3em 3em;
+    margin: 1em 3em 2em 3em;
     background: #eeeeee;
     border-radius: 15px;
     -moz-border-radius:15px;
@@ -376,7 +376,7 @@ html {
     left: 0;
 }
 .logo{
-    padding-left: 1em;
+    padding:1em 0 0 1em;
 }
 .monate_cust_height{
     height: 420px;
@@ -571,14 +571,16 @@ html {
     grid-template-columns: 6fr 2fr 2fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
+ 
     "brave_22 brave_22_dog brave_22_cat brave_22_dogcat brave_22_dogcat"
-    "brave_23_bg brave_23_bg_dog brave_23_bg_cat brave_23_bg_dogcat brave_23_bg_dogcat"
-    "brave_23_b brave_23_b_dog brave_23_b_cat brave_23_b_dogcat brave_23_b_dogcat"
     "final1 final1_num1 final1_num2 . ."
+    "brave_23_bg brave_23_bg_dog brave_23_bg_cat brave_23_bg_dogcat brave_23_bg_dogcat"
     "final2 final2_num1 final2_num2 . ."
-    "final3 final3_num1 final3_num2 . .";
+    "final3 final3_num1 final3_num2 . ."
+    "brave_23_b brave_23_b_dog brave_23_b_cat brave_23_b_dogcat brave_23_b_dogcat"
+        ;
 }
-.brave_grid p{margin:0.5em 0 0.5em 0;}
+.brave_grid p{margin:0em 0 0.5em 0;}
 
 .space_around{
     display: flex;
@@ -694,7 +696,11 @@ html {
 	z-index: -1;
 }
 
-
+.promomats-id{
+    padding: 0 4em 3em 4em;
+    font-size: 0.75em;
+    text-align: right;
+}
 
 @font-face {
 	font-family: "Invention";
