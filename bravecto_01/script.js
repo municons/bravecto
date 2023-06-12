@@ -171,7 +171,10 @@ c14.addEventListener("input", (event)=>{
     popBrave23BCat();
 });
 final3Num1.addEventListener("input", (event)=>{
-    if(Number.isInteger(+event.target.value)){
+    
+    if(Number.isInteger(+event.target.value)
+       && +event.target.value>=0
+       && +event.target.value<=12){
         final3Num1_num = +event.target.value;
     }
     else{
@@ -181,7 +184,9 @@ final3Num1.addEventListener("input", (event)=>{
     popBrave23BDog();
 });
 final3Num2.addEventListener("input", (event)=>{
-    if(Number.isInteger(+event.target.value)){
+    if(Number.isInteger(+event.target.value)
+       && +event.target.value>=0
+       && +event.target.value<=12){
         final3Num2_num = +event.target.value;
     }
     else{

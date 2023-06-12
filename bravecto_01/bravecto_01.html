@@ -9,9 +9,17 @@
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="js/general_online.js"></script>
-    <script type="text/javascript" src="js/globals.js"></script>
-    <script type="text/javascript" src="js/slideflow.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    
+    <script>
+    $("body").bind('touchmove', function (event) {
+            event.preventDefault();
+        });
+        $(document).ready(function () {
+            noBounce.init({ animate: true });
+            })
+    </script>
+    
 </head>
 <body>
     <div id="main" presentation-id="bravecto" slide-id="01"></div>
@@ -39,7 +47,7 @@
             <h2 class="slide_title">Gemeinsam Tiere besser schützen</h2>
             <div class="chart_card">
                 <div id="geme_title">
-                    <h3>Tierarztpraxis</h3>
+                    <h3>Allgemeine Kennzahlen</h3>
                 </div>
                 <div class="gemeinsam_grid">
                     <div class="justify_center" id="cat">
@@ -88,31 +96,31 @@
                         <p>Tiere in Ihrer Praxis</p>
                     </div>
                     <div class="justify_center align_center" id="tiere_input1">
-                        <input class="center" type="text" id="b12"/>
+                        <input class="center" type="number"  min="0" id="b12"/>
                     </div>
                     <div class="justify_center align_center" id="tiere_input2">
-                        <input class="center" type="text" id="c12"/>
+                        <input class="center" type="number" min="0" id="c12"/>
                     </div>
                     <div id="anteil">
                         <p>Anteil mit Bravecto behandelte Tiere in Ihrer Praxis %</p>
                     </div>
                     <div class="justify_center align_center" style="position:relative;" id="anteil_input1">
-                        <input class="center" type="text" id="b13"/>
+                        <input class="center" type="number" min="0" max="100" id="b13"/>
                         <div style="position: absolute; top: 0; left: 114px;"><p>%</p></div>
                     </div>
                     <div class="justify_center align_center" style="position:relative;"  id="anteil_input2">
-                        <input class="center" type="text" id="c13"/>
+                        <input class="center" type="number" min="0" max="100" id="c13"/>
                         <div style="position: absolute; top: 0; left: 114px;"><p>%</p></div>
                     </div>
                     <div id="abgeg">
-                        <p>Abgegebene Bravecto Behandlungen 2022</p>
+                        <p>Abgegebene Bravecto Behandlungen im vergangenen Jahr</p>
                     </div>
                     <div class="justify_center align_center" id="abgeg_input1">
-                        <input class="center" type="text" id="b14"/>
+                        <input class="center" type="number"  min="0" id="b14"/>
                         
                     </div>
                     <div class="justify_center align_center" id="abgeg_input2">
-                        <input class="center" type="text" id="c14"/>
+                        <input class="center" type="number"  min="0" id="c14"/>
                     </div>
                 </div>
             </div>
@@ -181,10 +189,10 @@
                 </div>
             </div>
             <footer>
-                <p>Hinweis: Die individuell eingegebenen Daten werden weder gespeichert noch verarbeitet. Sie werden nach der Präsentation sofort gelöscht.
+                <br><p><b>Hinweis: Die individuell eingegebenen Daten werden weder gespeichert noch verarbeitet. Sie werden nach der Präsentation sofort gelöscht.</b></p>
                 </p>
-                <p>
-                    *Die dargestellten Monate sind repräsentativ für das Verhältnis und zur Darstellung eines Bruchteils des ganzjährigen Schutzes. Bravecto bietet einen 12-wöchigen Schutz.**
+                <p style="font-size: small;">
+                    * Die dargestellten Monate sind repräsentativ für das Verhältnis und zur Darstellung eines Bruchteils des ganzjährigen Schutzes. Bravecto bietet einen 12-wöchigen Schutz.<br><br>** Bravecto® Kautabletten: sofortige und anhaltende abtötende Wirkung gegen Flöhe (Ctenocephalides felis) und Zecken (Ixodes ricinus, Dermacentor reticulatus, D. variabilis) über 12 Wochen und gegen Rhipicephalus sanguineus über 8 Wochen. Anhaltende Zecken-abtötende Wirkung gegen Ixodes hexagonus vom 7. Tag bis zu 12 Wochen nach der Behandlung. Zur Behandlung der durch Demodex canis verursachten Demodikose und Sarcoptes-Räude (Sarcoptes scabiei var. canis). Zur Verringerung des Infektionsrisikos mit Babesia canis canis mittels Übertragung durch Dermacentor reticulatus und mit Dipylidium caninum mittels Übertragung durch Ctenocephalides felis für bis zu 12 Wochen. Die Wirkung erfolgt indirekt durch die Wirksamkeit des Tierarzneimittels gegen die Vektoren. Bravecto® Lösung zum Auftropfen auf die Haut für Hunde: sofortige und anhaltende abtötende Wirkung gegen Flöhe (Ctenocephalides felis und Ctenocephalides canis) über 12 Wochen, sofortige und anhaltende Zecken-abtötende Wirkung (Ixodes ricinus, Rhipicephalus sanguineus und Dermacentor reticulatus) über 12 Wochen. Zur Behandlung der durch Demodex canis verursachten Demodikose. Zur Behandlung eines Sarcoptes-Räude (Sarcoptes scabiei var. canis) Befalls. Bravecto® Lösung zum Auftropfen auf die Haut für Katzen: sofortige und anhaltende abtötende Wirkung gegen Flöhe (Ctenocephalides felis) und Zecken (Ixodes ricinus) über 12 Wochen. Zur Behandlung eines Befalls mit Ohrmilben (Otodectes cynotis). Bravecto® Plus Lösung zum Auftropfen auf die Haut für Katzen: sofortige und anhaltende abtötende Wirkung gegen Flöhe (Ctenocephalides felis) und Zecken (Ixodes ricinus) über 12 Wochen. Zur Behandlung eines Befalls mit Ohrmilben (Otodectes cynotis). Zur Behandlung von Infektionen mit Spulwürmern (Toxocara cati) und Hakenwürmern (Ancylostoma tubaeforme). Bei wiederholter Verabreichung in 12-wöchigem Abstand beugt das Tierarzneimittel kontinuierlich einer durch Dirofilaria immitis verursachten Herzwurmerkrankung vor. Vorbeugung der Aelurostrongylose (durch Vermeidung der Ansiedlung von adulten Aelurostrongylus abstrusus, die für die klinische Erkrankung verantwortlich sind).    
                 </p>
                 <div style="height:20px;"></div>
             </footer>
@@ -193,7 +201,7 @@
             <div class="chart_card margin_top_2">
                 <div class="behand_grid">
                     <div id="behand_title">
-                        <h3>Tierarztpraxis</h3>
+                        <h3>Potential für einen ganzjährigen Schutz</h3>
                     </div>
                     <div class="justify_center" id="dog2">
                         <img src="public/alke.svg" alt="dog"/>
@@ -239,7 +247,7 @@
             <div class="chart_card margin_top_2">
                 <div class="brave_grid">
                     <div id="brave_22" class="align_center" >
-                        <h3>Bravecto Behandlungen 2022</h3>
+                        <h3>Bravecto Behandlungen im vergangenen Jahr</h3>
                     </div>
                     <div id="brave_22_dog" class="justify_center align_center" >
                         <p id="brave_22_dog_p" class="justify_center" ></p>
@@ -250,20 +258,27 @@
                     <div id="brave_22_dogcat" class="justify_center align_center">
                         <p id="brave_22_dogcat_p"></p>
                     </div>
+                    
+                    
+                    
+                    
                     <div id="brave_23_bg" class="justify_left align_center" >
-                        <p>Bravecto Behandlungen 2023 bisher gekauft</p>
+                        <p>Bravecto Behandlungen im aktuellen Jahr bisher gekauft</p>
                     </div>
                     <div id="brave_23_bg_dog" class="justify_center align_center">
-                        <input class="center" id="brave_23_bg_dog_p" type="text"/>
+                        <input class="center" id="brave_23_bg_dog_p" type="number"  min="0"/>
                     </div>
                     <div id="brave_23_bg_cat" class="justify_center align_center">
-                        <input class="center" id="brave_23_bg_cat_p" type="text"/>
+                        <input class="center" id="brave_23_bg_cat_p" type="number"  min="0"/>
                     </div>
                     <div class="justify_center align_center" id="brave_23_bg_dogcat">
                         <p id="brave_23_bg_dogcat_p"></p>
                     </div>
+                    
+                    
+                    
                     <div id="brave_23_b" class="justify_left align_center highlight">
-                        <p style="color:white">Bravecto Behandlungen 2023 benötigt</p>
+                        <p style="color:white;font-weight: bold;">Geplante Bravecto Behandlungen im aktuellen Jahr</p>
                     </div>
                     <div id="brave_23_b_dog" class="justify_center align_center highlight">
                         <p id="brave_23_b_dog_p" style="color:white"></p>
@@ -277,7 +292,7 @@
 
 
                     <div id="final1" class="justify_left align_center">
-                        <p>Monate*, die Ihre Patienten mit Bravecto geschützt waren 2022</p>
+                        <p>Monate*, die Ihre Patienten mit Bravecto<br>im vergangenen Jahr geschützt waren</p>
                     </div>
                     <div id="final1_num1" class="justify_center align_center">
                         <p id="final1_num1_p"></p>
@@ -286,7 +301,7 @@
                         <p id="final1_num2_p"></p>
                     </div>
                     <div id="final2" class="justify_left align_center">
-                        <p>Monate*, die Ihre Patienten in 2023 mit Bravecto mit den bisher gekauften Mengen geschützt werden</p>
+                        <p>Monate*, die Ihre Patienten mit Bravecto<br>im aktuellen Jahr mit den bisher gekauften Mengen geschützt werden</p>
                     </div>
                     <div id="final2_num1" class="justify_center align_center">
                         <p id="final2_num1_p"></p>
@@ -298,18 +313,22 @@
                         <p>Wie viele Monate* möchten Sie Ihre Patienten schützen?</p>
                     </div>
                     <div id="final3_num1" class="justify_center align_center">
-                        <input class="center" type="text" id="final3_num1_p"/>
+                        <input class="center" type="number" min="0" max="12" id="final3_num1_p"  data-role="none"/>
                     </div>
                     <div id="final3_num2" class="justify_center align_center">
-                        <input class="center" type="text" id="final3_num2_p"/>
+                        <input class="center" type="number" min="0" max="12" id="final3_num2_p"/>
                     </div>
+                    
                 </div>
             </div>
             <div class="subtext">
-                <p>Hinweis: Die individuell eingegebenen Daten werden weder gespeichert noch verarbeitet. Sie werden nach der Präsentation sofort gelöscht.</p>
+                <p><b>Hinweis: Die individuell eingegebenen Daten werden weder gespeichert noch verarbeitet. Sie werden nach der Präsentation sofort gelöscht.</b></p>
             </div>
             <div class="subtext">
-                <p>*Die dargestellten Monate sind repräsentativ für das Verhältnis und zur Darstellung eines Bruchteils des ganzjährigen Schutzes. Bravecto bietet einen 12-wöchigen Schutz.**</p>
+                <p style="font-size: small;">
+                    * Die dargestellten Monate sind repräsentativ für das Verhältnis und zur Darstellung eines Bruchteils des ganzjährigen Schutzes. Bravecto bietet einen 12-wöchigen Schutz.<br><br>** Bravecto® Kautabletten: sofortige und anhaltende abtötende Wirkung gegen Flöhe (Ctenocephalides felis) und Zecken (Ixodes ricinus, Dermacentor reticulatus, D. variabilis) über 12 Wochen und gegen Rhipicephalus sanguineus über 8 Wochen. Anhaltende Zecken-abtötende Wirkung gegen Ixodes hexagonus vom 7. Tag bis zu 12 Wochen nach der Behandlung. Zur Behandlung der durch Demodex canis verursachten Demodikose und Sarcoptes-Räude (Sarcoptes scabiei var. canis). Zur Verringerung des Infektionsrisikos mit Babesia canis canis mittels Übertragung durch Dermacentor reticulatus und mit Dipylidium caninum mittels Übertragung durch Ctenocephalides felis für bis zu 12 Wochen. Die Wirkung erfolgt indirekt durch die Wirksamkeit des Tierarzneimittels gegen die Vektoren. Bravecto® Lösung zum Auftropfen auf die Haut für Hunde: sofortige und anhaltende abtötende Wirkung gegen Flöhe (Ctenocephalides felis und Ctenocephalides canis) über 12 Wochen, sofortige und anhaltende Zecken-abtötende Wirkung (Ixodes ricinus, Rhipicephalus sanguineus und Dermacentor reticulatus) über 12 Wochen. Zur Behandlung der durch Demodex canis verursachten Demodikose. Zur Behandlung eines Sarcoptes-Räude (Sarcoptes scabiei var. canis) Befalls. Bravecto® Lösung zum Auftropfen auf die Haut für Katzen: sofortige und anhaltende abtötende Wirkung gegen Flöhe (Ctenocephalides felis) und Zecken (Ixodes ricinus) über 12 Wochen. Zur Behandlung eines Befalls mit Ohrmilben (Otodectes cynotis). Bravecto® Plus Lösung zum Auftropfen auf die Haut für Katzen: sofortige und anhaltende abtötende Wirkung gegen Flöhe (Ctenocephalides felis) und Zecken (Ixodes ricinus) über 12 Wochen. Zur Behandlung eines Befalls mit Ohrmilben (Otodectes cynotis). Zur Behandlung von Infektionen mit Spulwürmern (Toxocara cati) und Hakenwürmern (Ancylostoma tubaeforme). Bei wiederholter Verabreichung in 12-wöchigem Abstand beugt das Tierarzneimittel kontinuierlich einer durch Dirofilaria immitis verursachten Herzwurmerkrankung vor. Vorbeugung der Aelurostrongylose (durch Vermeidung der Ansiedlung von adulten Aelurostrongylus abstrusus, die für die klinische Erkrankung verantwortlich sind).    
+  
+                </p>
             </div>
             <div style="height:20px;"></div>
         </section>
@@ -325,7 +344,6 @@
                     <div>
                         <p>IVH-Der Deutsche Heimtiermarkt 2022</p>
                     </div>
-                    
                     <div>
                         <p><b>Anzahl Katzen</b></p>
                     </div>
@@ -355,7 +373,7 @@
                     </div>
                 </div>
             </div>
-            
+            <div class="promomats-id">DE-BRV-230400003</div>
         </section>
         <section class="hidden" id="section4">
             <div style="display:flex; justify-content: space-between; padding-right:50px;">
@@ -368,7 +386,7 @@
                 <p>All rights reserved. All trademarks are property of their respective owners.</p>
                 <a href="https://www.msd-tiergesundheit.de/datenschutz/" target=”_blank” style="font-size:14pt;">Datenschutz</a>
                 <p><b>Hinweis: Die individuell eingegebenen Daten werden weder gespeichert noch verarbeitet. Sie werden nach der Präsentation sofort gelöscht.</b></p>
-                <p>**Bravecto® Kautabletten: sofortige und anhaltende abtötende Wirkung gegen Flöhe (Ctenocephalides felis) und Zecken (Ixodes ricinus, Dermacentor reticulatus, D. variabilis) über 12 Wochen und gegen Rhipicephalus sanguineus über 8 Wochen. Anhaltende Zecken-abtötende Wirkung gegen Ixodes hexagonus vom 7. Tag bis zu 12 Wochen nach der Behandlung. Zur Behandlung der durch Demodex canis verursachten Demodikose und Sarcoptes-Räude (Sarcoptes scabiei var. canis). Zur Verringerung des Infektionsrisikos mit Babesia canis canis mittels Übertragung durch Dermacentor reticulatus und mit Dipylidium caninum mittels Übertragung durch Ctenocephalides felis für bis zu 12 Wochen. Die Wirkung erfolgt indirekt durch die Wirksamkeit des Tierarzneimittels gegen die Vektoren.</p>    
+                
             </div>
             <div style="height:20px;"></div>
         </section>
