@@ -578,6 +578,7 @@ html {
     "final2 final2_num1 final2_num2 . ."
     "final3 final3_num1 final3_num2 . ."
     "brave_23_b brave_23_b_dog brave_23_b_cat brave_23_b_dogcat brave_23_b_dogcat"
+    "jahr jahr_num1 jahr_num2 jahr_num3 jahr_num3"
         ;
 }
 .brave_grid p{margin:0em 0 0.5em 0;}
@@ -679,6 +680,21 @@ html {
 }
 #final3_num2{
     grid-area:final3_num2;
+}
+#jahr{
+    grid-area:jahr;
+    border-bottom-left-radius: inherit;
+    padding-left: 1em;
+}
+#jahr_num1{
+    grid-area: jahr_num1;
+}
+#jahr_num2{
+    grid-area: jahr_num2;
+}
+#jahr_num3{
+    grid-area: jahr_num3;
+    border-bottom-right-radius: inherit;
 }
 .highlight{
     background: var(--color-secondary-500);
