@@ -572,11 +572,11 @@ html {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
  
+    "final3 final3_num1 final3_num2 final3_num3 final3_num4"
     "brave_22 brave_22_dog brave_22_cat brave_22_dogcat brave_22_dogcat"
     "final1 final1_num1 final1_num2 . ."
     "brave_23_bg brave_23_bg_dog brave_23_bg_cat brave_23_bg_dogcat brave_23_bg_dogcat"
     "final2 final2_num1 final2_num2 . ."
-    "final3 final3_num1 final3_num2 . ."
     "brave_23_b brave_23_b_dog brave_23_b_cat brave_23_b_dogcat brave_23_b_dogcat"
     "jahr jahr_num1 jahr_num2 jahr_num3 jahr_num3"
         ;
@@ -592,39 +592,27 @@ html {
 }
 #brave_22{
     grid-area: brave_22;
-    border-top-left-radius: inherit;
-    
-    background-color: #602c6b;
 }
 #brave_22 h3 {
-    color: #FFFFFF;
     font-size: 1.3em;
 }
 
 #brave_22 p{
-    color: #FFFFFF;
 }
 #brave_22_dog{
-    background-color: #602c6b;
     grid-area: brave_22_dog;
 }
 #brave_22_dog p{
-    color: #FFFFFF;
 }
 #brave_22_cat{
-    background-color: #602c6b;
     grid-area: brave_22_cat;
 }
 #brave_22_cat p{
-    color: #FFFFFF;
 }
 #brave_22_dogcat{
     grid-area: brave_22_dogcat;
-    background-color: #602c6b;
-    border-top-right-radius: inherit;
 }
 #brave_22_dogcat p{
-    color: #FFFFFF;
 }
 #brave_23_bg{
     grid-area: brave_23_bg;
@@ -672,15 +660,38 @@ html {
 #final2_num2{
     grid-area:final2_num2;
 }
-#final3{
+#final3,#final4{
     grid-area:final3;
+    background-color: #602c6b;
+    color: #FFFFFF;
 }
+#final3{border-top-left-radius: inherit;}
+
+
+#final3 p{
+    grid-area:final3;
+    background-color: #602c6b;
+    color: #FFFFFF;
+}
+
 #final3_num1{
     grid-area:final3_num1;
+    background-color: #602c6b;
 }
 #final3_num2{
     grid-area:final3_num2;
+    background-color: #602c6b;
 }
+#final3_num3{
+    grid-area:final3_num3;
+    background-color: #602c6b;
+}
+#final3_num4{
+    grid-area:final3_num4;
+    background-color: #602c6b;
+    border-top-right-radius: inherit;
+}
+
 #jahr{
     grid-area:jahr;
     border-bottom-left-radius: inherit;
